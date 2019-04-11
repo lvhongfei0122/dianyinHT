@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户注册</title>
+<style type="text/css">
+	body{
+		background: lightskyblue;
+	}
+	table{
+			width:700px;
+			border:1px solid gray;
+			margin:50px auto;
+		}
+	table td{
+		text-align: center;
+		border:1px solid gray;
+		padding:10px;
+	}
+	input{
+		width:250px;
+		height: 30px;
+		border-radius: 5px;
+		border:1px solid gray;
+		padding-left:5px;
+	}
+</style>
+</head>
+<body>
+	
+<form action="checkLogin.php" method="post" name="formData" onsubmit="return check()">
+	<table>
+		<tr>
+			<td colspan="2">
+				<h1 >登陆页面</h1>
+			</td>
+		</tr>
+		<tr>
+			<td>用户名称:</td>
+			<td  style='text-align: left;'>
+				<input type="text" name="userName" id='username'>	
+			</td>
+		</tr>
+		<tr>
+			<td>用户密码:</td>
+			<td style='text-align: left;'>
+				<input type="password" name="userPwd" id='userpwd' >	
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="登录">	
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+<script type="text/javascript">
+	function check(){
+		var username = document.getElementById('username');
+		var userpwd = document.getElementById('userpwd');
+		if(username.value == ""){
+			alert("请输入用户名称");
+			return false;
+		}
+		if(userpwd.value == ""){
+			alert("请输入用户密码");
+			return false;
+		}
+	}
+</script>
+</html>
